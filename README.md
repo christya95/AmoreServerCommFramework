@@ -65,7 +65,7 @@ Output: `dist/AmoreServerCommCore.jar`
 | `/amoretracedumptrace` | Write last ~30s Chrome JSON to `mods/amore-traces/*-trace.json` |
 | `/amoretracedumpcbor` | Write last ~30s as CBOR array of maps to `mods/amore-traces/*.cbor` |
 
-Keep **`DoubleJumpTrace`** verbose logging off for normal play (hardcoded user in `DoubleJumpTrace.java`).
+Use tracing **only while diagnosing** (`/amoretraceoff` after). JossDoubleJump no longer ships a hardcoded-username text trace; Amore is the supported diagnostics path.
 
 ### Extension points
 
