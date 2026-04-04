@@ -1,0 +1,1 @@
+{"traceEvents":[{"name":"amore.tick","ph":"X","ts":9123456789.0,"dur":1.0,"pid":1,"tid":1,"args":{"tickId":1735123456789,"jumpEdge":true,"applyResult":"REJECT_COOLDOWN","movementBits":3,"fsmState":18}}]}
