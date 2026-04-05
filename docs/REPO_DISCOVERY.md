@@ -14,7 +14,7 @@ Generated during framework design. **No coding assumptions** beyond what is veri
 | **Per-tick ECS** | `com.hypixel.hytale.component.system.tick.EntityTickingSystem` — `QueueScannerSystem` **BEFORE** `PlayerSystems.ProcessPlayerInput`; `AfterInputSystem` **AFTER** `PlayerSystems.ProcessPlayerInput` |
 | **Double-jump FSM** | `DoubleJumpComponent`: `Phase` (GROUNDED / AIR_CAN_DOUBLE / AIR_SPENT) + `InputState` (WAITING_FOR_PRESS / HELD / COOLDOWN_FRAMES). Queue fields: `pendingQueueJumpEdge`, `queueJumpEdgeBufferUntilMs`, `jumpHeldLastQueue`, `movementQueueHadSms`, counters |
 | **Decision / apply** | Signal arbitration in `AfterInputSystem.tick` (raw → divergent MS → queueSmsLive → queueSms → fallback). `requestSecondJump` from edge/tapAssist/synthetic + `queueEdge`. **`DoubleJumpTicking.tryApply`** applies impulse / stamina / charges. **Ability path**: `DoubleJumpInteraction.firstRun` → `tryApply` |
-| **Diagnostics** | **`JossDoubleJumpTraceBridge`** + Amore ring when `/amoretraceon`; no legacy per-username text trace in current Joss sources |
+| **Diagnostics** | **`JossDoubleJumpTraceBridge`** + Amore ring when `/amoretraceon`; **`AmoreTraceCommands`** sends **`[Amore] …`** chat lines for trace on/off and dumps; no legacy per-username text trace in current Joss sources |
 
 ## PebbleHostServerRoot
 

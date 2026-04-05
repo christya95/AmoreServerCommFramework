@@ -65,6 +65,8 @@ Output: `dist/AmoreServerCommCore.jar`
 | `/amoretracedumptrace` | Write last ~30s Chrome JSON to `mods/amore-traces/*-trace.json` |
 | `/amoretracedumpcbor` | Write last ~30s as CBOR array of maps to `mods/amore-traces/*.cbor` |
 
+**In-game feedback (JossDoubleJump):** running these commands sends **`[Amore] …`** lines to your chat (toggle on/off, dump success with filename, or a short error). That confirms the command ran even when server logs are hard to read.
+
 Use tracing **only while diagnosing** (`/amoretraceoff` after). JossDoubleJump no longer ships a hardcoded-username text trace; Amore is the supported diagnostics path.
 
 ### Extension points
